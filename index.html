@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="keywords" content="Document" />
+        <meta name="description" content="Your Description..." />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="resources/swiper js/swiper-bundle.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="resources/css/loader.css" />
+        <link rel="stylesheet" href="resources/css/hamburger.css" />
+        <link rel="stylesheet" href="resources/css/home.css" />
+        <link rel="stylesheet" href="resources/css/about.css" />
+        <link rel="stylesheet" href="resources/css/services.css">
+        <link rel="stylesheet" href="resources/css/portfolio.css" />
+        <link rel="stylesheet" href="resources/css/blog.css" />
+        <link rel="stylesheet" href="resources/css/contact.css" />
+        <link href="resources/mapbox-gl/mapbox-gl.css" rel="stylesheet" />
+        <link rel="stylesheet" href="resources/css/style.css" />
+        <link
+            rel="shortcut icon"
+            href="resources/img/favicon.ico"
+            type="image/x-icon"
+        />
+    </head>
+    <body onload="loaded()">
+        <div class="loader">
+            <div class="c c1"></div>
+            <div class="c c2"></div>
+            <div class="c c3"></div>
+            <div class="c c4"></div>
+            <div class="c c5"></div>
+            <div class="c c6"></div>
+        </div>
+        <script>
+            let loader = document.querySelector(".loader");
+            function loaded() {
+                loader.classList.add("remove");
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 1000);
+            }
+        </script>
+        <!-- HAMBURGER MENU BUTTON (responsively visible) -->
+        <div class="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <!-- THE REAL NAVIGATION -->
+        <nav class="navigation">
+            <h1>
+                Esha
+                <div></div>
+                <div></div>
+            </h1>
+            <ul>
+                <li><a href="#" onclick="home()">home</a></li>
+                <li>
+                    <a
+                        href="#"
+                        onclick="about(); animate3.play(); animate4.play();"
+                        >about</a
+                    >
+                </li>
+                <li><a href="#" onclick="services(); animate6.play();">services</a></li>
+                <li><a href="#" onclick="portfolio()">portfolio</a></li>
+                <li><a href="#" onclick="blog()">strength</a></li>
+                <li>
+                    <a href="#" onclick="contact(); animate5.play()">contact</a>
+                </li>
+            </ul>
+            <p>&copy; 2024 Esha</p>
+        </nav>
+
+        <div class="container">
+            <div class="layer layer1 active">
+                <div class="home main">
+                    <div class="canvas_container">
+                        <canvas></canvas>
+                    </div>
+                    <div class="content-for-home">
+                        <div class="img-container"></div>
+                        <h1 align="center">Esha Chellani</h1>
+                        <div class="social-icons">
+                            <div class="s-icon">
+                                <a href="#">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <div class="s-name">Facebook</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <div class="s-name">Tweeter</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="#">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <div class="s-name">GitHub</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="#">
+                                    <i class="fab fa-codepen"></i>
+                                </a>
+                                <div class="s-name">Linkdin</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <div class="s-name">Instagram</div>
+                            </div>
+                            <div class="s-icon">
+                                <a href="#">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <div class="s-name">Email</div>
+                            </div>
+                        </div>
+
+                        <div class="side-nav">
+                            <button
+                                onclick="about(); animate3.play(); animate4.play();"
+                            >
+                                <span class="w">W</span>
+                                <span class="tooltip"> why you? </span>
+                            </button>
+                            <button onclick="services(); animate6.play();">
+                                <span class="w">W</span>
+                                <span class="tooltip"> what do you do? </span>
+                            </button>
+                            <button onclick="portfolio()">
+                                <span class="w">W</span>
+                                <span class="tooltip">
+                                    what have you done?
+                                </span>
+                            </button>
+                            <button onclick="strength()">
+                                <span class="w">W</span>
+                                <span class="tooltip"> what others say? </span>
+                            </button>
+                            <button onclick="contact(); animate5.play()">
+                                <span class="w">W</span>
+                                <span class="tooltip"> where are you? </span>
+                            </button>
+                        </div>
+
+                        <div class="titles-for-side-nav">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer2">
+                <div class="about main">
+                    <!-- SEGMENT FOR STYLING. -->
+                    <div class="styling">
+                        <div class="absolute box"></div>
+                        <div class="absolute circle"></div>
+                        <div class="absolute triangle"></div>
+                        <div class="absolute dots">
+                            <div class="dot dot1"></div>
+                            <div class="dot dot2"></div>
+                            <div class="dot dot3"></div>
+                            <div class="dot dot4"></div>
+                            <div class="dot dot5"></div>
+                            <div class="dot dot6"></div>
+                            <div class="dot dot7"></div>
+                            <div class="dot dot8"></div>
+                            <div class="dot dot9"></div>
+                            <div class="dot dot10"></div>
+                            <div class="dot dot11"></div>
+                            <div class="dot dot12"></div>
+                            <div class="dot dot13"></div>
+                            <div class="dot dot14"></div>
+                            <div class="dot dot15"></div>
+                            <div class="dot dot16"></div>
+                            <div class="dot dot17"></div>
+                            <div class="dot dot18"></div>
+                            <div class="dot dot19"></div>
+                            <div class="dot dot20"></div>
+                            <div class="dot dot21"></div>
+                            <div class="dot dot22"></div>
+                            <div class="dot dot23"></div>
+                            <div class="dot dot24"></div>
+                        </div>
+
+                        <svg
+                            class="wave absolute"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1450 320"
+                        >
+                            <path
+                                fill-opacity="1"
+                                d="M0,320L48,277.3C96,235,192,149,288,122.7C384,96,480,128,576,165.3C672,203,768,245,864,234.7C960,224,1056,160,1152,112C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                            ></path>
+                        </svg>
+
+                        <svg
+                            class="wave absolute opposite"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1450 320"
+                        >
+                            <path
+                                fill-opacity="1"
+                                d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,218.7C672,192,768,96,864,64C960,32,1056,64,1152,101.3C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                            ></path>
+                        </svg>
+                    </div>
+
+                    <!-- REAL CONTENT -->
+                    <div class="wrapper">
+                        <div class="face face1">
+                            <div class="content">
+                                <p>Hello,</p>
+                                <h1>I'm Esha Chellani</h1>
+                                <p class="text">
+                                    I am a Web Developer, and I'm very
+                                    passionate and dedicated to my work With 
+                                    fresher experience as a professional Web
+                                    Developer, I have acquired the skills and
+                                    knowledge necessary to make your project a
+                                    success I enjoy every step of the design
+                                    process, from discussion and collaboration.
+                                </p>
+                                <a
+                                    class="button download"
+                                    href="file:///C:/Users/eshac/Downloads/ESHA%20CHELLANI%20(12)_page-0001.jpg"
+                                    download="esha_cv"
+                                    >Download CV</a
+                                >
+                                <a
+                                    class="button hire"
+                                    href="#"
+                                    class="hire"
+                                    onclick="contact(); animate5.play()"
+                                    >Hire Me.</a
+                                >
+                            </div>
+                        </div>
+                        <div class="face face2"></div>
+                    </div>
+
+                    <!-- THE NAVIGATION OF ABOUT -->
+                    <nav class="about_nav">
+                        <ul>
+                            <li>
+                                <a class="active" href="#" data-text="one"
+                                    >Skills</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#" data-text="two">Experience</a>
+                            </li>
+                            <li>
+                                <a href="#" data-text="three">Education</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="about_container">
+                        <!-- SKILL BOX -->
+                        <div class="skills">
+                            <div class="skill">
+                                <div class="name">HTML5</div>
+                                <div class="value" style="left: 90%">90%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 90%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">CSS3</div>
+                                <div class="value" style="left: 75%">90%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 75%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">JavaScript</div>
+                                <div class="value" style="left: 65%">75%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 65%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">PHP</div>
+                                <div class="value" style="left: 50%">50%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 50%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">DSA</div>
+                                <div class="value" style="left: 45%">85%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 45%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="name">C++</div>
+                                <div class="value" style="left: 55%">85%</div>
+                                <div class="percent">
+                                    <div
+                                        class="progress"
+                                        style="width: 55%"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- EXPERIENCE -->
+                        <div class="experience">
+                            <div class="middle_line"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">Fresher</i>
+                                <h2>Full Stack Developer</h2>
+                                <i class="name_company"></i>
+                                <article class="text_hidden">
+                                    
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date">Fresher</i>
+                                <h2>Software Programmer</h2>
+                                <i class="name_company"></i>
+                                <article class="text_hidden">
+                                   
+                                </article>
+                            </div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date"></i>
+                                <h2></h2>
+                                <i class="name_company"></i>
+                                <article class="text_hidden">
+                                    
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-briefcase"></i>
+                                <i class="date"></i>
+                                <h2></h2>
+                                <i class="name_company"></i>
+                                <article class="text_hidden">
+                                    
+                                </article>
+                            </div>
+                        </div>
+                        <div class="education">
+                            <div class="middle_line"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-reader"></i>
+                                <i class="date">2021-2024</i>
+                                <h2>Bachelors in Computer Science</h2>
+                                <i class="name_company"></i>
+                                <article class="text_hidden">
+                                    Scored 8 Cgpa , also got an excellence award.
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-reader"></i>
+                                <i class="date">2020</i>
+                                <h2>Intermediate Examination</h2>
+                                <i class="name_company"></i>
+                                <article class="text_hidden">
+                                    Scored 72% in my intermediate education.
+                                </article>
+                            </div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-open"></i>
+                                <i class="date">2018</i>
+                                <h2>High School Examination</h2>
+                                <i class="name_company"></i>
+                                <article class="text_hidden">
+                                    Got 75% in my high school Examination.
+                                </article>
+                            </div>
+                            <div class="whitespace"></div>
+                            <div class="whitespace"></div>
+                            <div class="cover">
+                                <i class="job_box fas fa-book-open"></i>
+                                <i class="date"></i>
+                                <h2></h2>
+                                <i class="name_company"></i>
+                                <article class="text_hidden">
+                                    
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer3">
+                <div class="services main">
+                    <!-- <section class="background">
+                        <div class="bg_wrapper"></div>
+                    </section> -->
+                    <div class="hero">
+                        <span class="typography">
+                            <span class="t_dummy">We know how to</span> <br />
+                            <span class="t-box">
+                                <span class="box-side box-front"
+                                    >take risk</span
+                                >
+                                <span class="box-side box-top"
+                                    >take a side</span
+                                >
+                                <span class="box-side box-back"
+                                    >be different</span
+                                >
+                                <span class="box-side box-bottom"
+                                    >be innovative</span
+                                >
+                            </span>
+                        </span>
+                        <p class="hero-text">
+                            Esha is an excellent web designer and faultless
+                            technician. she is a pleasure to work with, great
+                            value for money and will always go the extra mile
+                            when necessary.
+                        </p>
+                    </div>
+                    <div class="capabilities left move-little-down">
+                        <img src="resources/img/elements/web_bg.png" alt="" />
+                        <p class="c_content">
+                            <span class="c_title">Web</span>
+                            Her creative journey started with Web Design. To
+                            code his own designs, she learned how to code and has
+                            since then worked hard to stay relevant in both
+                            fields. For smooth collaboration with clients she is
+                            now-a-days using programing languages for designing
+                            and prototyping.
+                            <br />
+                            <a href="#">Learn More</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                        </p>
+                    </div>
+                    <div class="capabilities right">
+                        <p class="c_content">
+                            <span class="c_title">Graphics</span>
+                            With a designers eye for details, esha is
+                            passionate about implementing designed into highly
+                            interactive experience by paying close attention to
+                            details, animations and performances.
+                            <br />
+                            <a href="#">Learn More</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                        </p>
+                        <img
+                            src="resources/img/elements/graphics_bg.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="capabilities left">
+                        <img
+                            src="resources/img/elements/seo_bg.png"
+                            alt=""
+                            style="
+                                background: #2929292f;
+                                backdrop-filter: blur(4px);
+                                border-radius: 40px;
+                            "
+                        />
+                        <p class="c_content">
+                            <span class="c_title">SEO</span>
+                            With fresher experience in the Digital industry,
+                           she proved that the combination of strategic thinking
+                            and expertise will create a fascinating digital
+                            experience.
+                            <br />
+                            <a href="#">Learn More</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                        </p>
+                    </div>
+                    <div class="foot">
+                        <h2>Works:</h2>
+                        <div class="foot-link">
+                            <a href="#" onclick="portfolio()">Library Management</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                            <img
+                                src="resources/img/portfolios/app/2.jpg"
+                                alt="portfolio"
+                            />
+                        </div>
+                        <div class="foot-link">
+                            <a href="#" onclick="portfolio()">Movie Recommendation</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                            <img
+                                src="resources/img/portfolios/card/2.jpg"
+                                alt="portfolio"
+                            />
+                        </div>
+                        <div class="foot-link">
+                            <a href="#" onclick="portfolio()">SHE gpt</a>
+                            <i class="far fa-arrow-alt-circle-right"></i>
+                            <img
+                                src="resources/img/portfolios/web/1.jpg"
+                                alt="portfolio"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer4">
+                <div class="portfolio main">
+                    <div class="tip main">
+                        <div class="allContent">
+                            <div class="description" style="display: none">
+                                <div class="pro_intro">
+                                    <div class="nameplate">
+                                        <h1>Wedding Couple</h1>
+                                        <span
+                                            >Category:
+                                            <span style="color: #999"
+                                                >Web Design</span
+                                            ></span
+                                        >
+                                    </div>
+                                    <div class="other_text">
+                                        <h2>Project Brief:</h2>
+                                        <p
+                                            class="pro_brief"
+                                            style="
+                                                color: #999;
+                                                padding-left: 15px;
+                                            "
+                                        >
+                                            Lorem ipsum, dolor sit amet
+                                            consectetur adipisicing elit. At
+                                            corrupti modi perferendis iure
+                                            corporis dolores minus asperiores
+                                            nemo debitis veritatis id placeat,
+                                            similique eum recusandae ipsa quia
+                                            cum earum nam?
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="pro_info">
+                                    <h2>Project Info</h2>
+                                    <p class="Date">
+                                        <b>Date: </b>
+                                        <span style="color: #999">2020</span>
+                                    </p>
+                                    <p class="client">
+                                        <b>Client: </b>
+                                        <span style="color: #999">xyz</span>
+                                    </p>
+                                    <p>
+                                        <b>Tools: </b>
+                                        <span style="color: #999"
+                                            >HTML, CSS, JavaScript</span
+                                        >
+                                    </p>
+                                    <p class="link">
+                                        <b>Web: </b>
+                                        <span style="color: #999"
+                                            ><a href="#"
+                                                >www.domain.com</a
+                                            ></span
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+
+                            <button class="closeButton">
+                                <span>Project Details</span>
+                                <div class="icon"></div>
+                            </button>
+                            <button class="exitButton">&times;</button>
+
+                            <div class="port_content">
+                                <div class="swiper-container-2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="#" alt="web design" />
+                                        </div>
+                                    </div>
+                                    <!-- Add Pagination -->
+                                    <div class="swiper-scrollbar"></div>
+                                    <!-- Add Arrows -->
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="about_nav padding_top">
+                        <ul>
+                            <li>
+                                <a
+                                    class="filter active"
+                                    href="#"
+                                    data-filter="all"
+                                    >All</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".web"
+                                    >Web Design</a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".logo"
+                                    ></a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".card"
+                                    ></a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".app"
+                                    ></a
+                                >
+                            </li>
+                            <li>
+                                <a class="filter" href="#" data-filter=".icon"
+                                    ></a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="mymixcont">
+                        <div class="mix web">
+                            <img
+                                src="https://www.elibrarysoftware.com/img/library-shelf.jpg"
+                                alt=""
+                            />
+                            <span class="title">Library Management</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src="https://media.licdn.com/dms/image/D4D12AQGsRSHV3P7_sg/article-cover_image-shrink_720_1280/0/1679842659138?e=2147483647&v=beta&t=pqldOMLxBloin4UsitRCd9Tv27qAIgxf6ayd53Zlue0"
+                                alt=""
+                            />
+                            <span class="title">Movie Recommendation</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="https://fireflies.ai/blog/content/images/2022/12/What-is-GPT.jpg"
+                                alt=""
+                            />
+                            <span class="title">SHE gpt</span>
+                            <span class="port_link">View Project</span>
+                        </div>
+                        <div class="mix web">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix app">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix web">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src="g"
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix web">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix app">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix card">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix logo">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix app">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                        <div class="mix icon">
+                            <img
+                                src=""
+                                alt=""
+                            />
+                            <span class="title"></span>
+                            <span class="port_link"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer5">
+                <div class="testimonial">
+                    <h1>
+                        <span> My Strengths </span>
+                    </h1>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="data:image/png;base64,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" alt="" />
+                                <h4>Esha</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Create a variety of projects to demonstrate my programming abilities and problem-solving skills. 
+                                    These projects could range from web development,  data analysis, machine learning models, or any other area of interest within computer science.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="data:image/png;base64,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" alt="" />
+                                <h4>Esha</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Create a variety of projects to demonstrate my programming abilities and problem-solving skills. 
+                                    These projects could range from web development,  data analysis, machine learning models, or any other area of interest within computer science.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="data:image/png;base64,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" alt="" />
+                                <h4>Esha</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Create a variety of projects to demonstrate my programming abilities and problem-solving skills. 
+                                    These projects could range from web development,  data analysis, machine learning models, or any other area of interest within computer science.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="data:image/png;base64,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" alt="" />
+                                <h4>Esha</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Create a variety of projects to demonstrate my programming abilities and problem-solving skills. 
+                                    These projects could range from web development,  data analysis, machine learning models, or any other area of interest within computer science.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="data:image/png;base64,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" alt="" />
+                                <h4>Esha</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Create a variety of projects to demonstrate my programming abilities and problem-solving skills. 
+                                    These projects could range from web development,  data analysis, machine learning models, or any other area of interest within computer science.
+                                </p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="data:image/png;base64,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" alt="" />
+                                <h4>Esha</h4>
+                                <div class="rating">
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                    <label>&starf;</label>
+                                </div>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Create a variety of projects to demonstrate my programming abilities and problem-solving skills. 
+                                    These projects could range from web development,  data analysis, machine learning models, or any other area of interest within computer science.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layer layer6">
+                <div class="contact_us">
+                    <div id="map"></div>
+                    <address class="info_container">
+                        <div class="info info1">
+                            <i class="fas fa-phone-alt"></i>
+                            <span class="iname">Phone</span>
+                            <a href="tel:+8800000000000">+91 3487389109</a>
+                            <a href="tel:+8811111111111">+91 348799109</a>
+                        </div>
+                        <div class="info info2">
+                            <i class="fas fa-home"></i>
+                            <span class="iname">Address</span>
+                            <a
+                                href="https://www.google.com/maps/dir/Rooma/Rooma,+Uttar+Pradesh+208008/@26.3592912,80.3957082,13z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x399c4214b1aae861:0xd70a57180eefc562!2m2!1d80.4369081!2d26.3592202!1m5!1m1!1s0x399c4214b1aae861:0xd70a57180eefc562!2m2!1d80.4369081!2d26.3592202!3e3?entry=ttu"
+                            >
+                                <h3> kit</h3>
+                                <span>rooma insdustrial area</span><br />
+                                <span>Kanpur</span>
+                            </a>
+                        </div>
+                        <div class="info info3">
+                            <i class="fas fa-envelope"></i>
+                            <span class="iname">Email</span>
+                            <a href="mailto:email1.gmail.com"
+                                >eshachellani92@gmail.com</a
+                            >
+                            <a href="mailto:email2.gmail.com"
+                                >eshachellani92@gmail.com</a
+                            >
+                        </div>
+                    </address>
+
+                    <form action="#" method="post">
+                        <h1>Get In Touch</h1>
+                        <div class="inp_field">
+                            <i class="fas fa-user"></i>
+                            <input
+                                type="text"
+                                name="name"
+                                class="fname"
+                                id="fname"
+                                placeholder="Full Name"
+                                required
+                            />
+                        </div>
+                        <div class="inp_field">
+                            <i class="fas fa-envelope"></i>
+                            <input
+                                type="email"
+                                name="email"
+                                class="email"
+                                id="email"
+                                placeholder="Email"
+                                required
+                            />
+                        </div>
+                        <div class="inp_field">
+                            <i class="fas fa-angle-double-right"></i>
+                            <input
+                                type="text"
+                                name="subject"
+                                class="subject"
+                                id="subject"
+                                placeholder="Subject"
+                                required
+                            />
+                        </div>
+                        <textarea
+                            name="message"
+                            cols="30"
+                            rows="5"
+                            class="message"
+                            id="message"
+                            placeholder="Message"
+                            required
+                        ></textarea>
+                        <button class="submit" id="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-----------------JQUERY {https://jquery.com/} [USED IN portfolio.js]----------------->
+        <script src="resources/js/jquery.min.js"></script>
+        <!-----------------MIX IT UP {https://www.kunkalabs.com/mixitup/} [USED IN portfolio.js]----------------->
+        <script src="resources/js/mixitup.min.js"></script>
+        <!-----------------SWIPER JS {https://swiperjs.com/} [USED IN portfolio.js, blog.js]----------------->
+        <script src="resources/swiper js/swiper-bundle.min.js"></script>
+        <!-----------------MAPBOX GL {https://www.mapbox.com/} [USED IN contact.js]----------------->
+        <script src="resources/mapbox-gl/mapbox-gl.js"></script>
+        <!-----------------EMAIL JS {https://www.emailjs.com/} [USED IN contact.js]----------------->
+        <script src="resources/js/email.min.js"></script>
+        <!-----------------ADDITIONAL SCRIPT FOR EMAIL JS----------------->
+        <script type="text/javascript">
+            (function () {
+                emailjs.init("user_5OMETIDQ2Nm9qBMtaFNz4");
+            })();
+        </script>
+        <!-----------------VANILLA TILT JS {https://micku7zu.github.io/vanilla-tilt.js/}----------------->
+        <script src="resources/js/vanilla-tilt.min.js"></script>
+        <!-----------------ANIME JS {https://animejs.com/} [USED LOCALLY.]----------------->
+        <script src="resources/js/anime.min.js"></script>
+        <!-----------------LOCAL (HOME)----------------->
+        <script src="resources/js/home.js"></script>
+        <!-----------------LOCAL (ABOUT)----------------->
+        <script src="resources/js/about.js"></script>
+        <!-----------------LOCAL (SERVICES)----------------->
+        <script src="resources/js/services.js"></script>
+        <!-----------------LOCAL (PORTFOLIO)----------------->
+        <script src="resources/js/portfolio.js"></script>
+        <!-----------------LOCAL (BLOG)----------------->
+        <script src="resources/js/blog.js"></script>
+        <!-----------------LOCAL (CONTACT)----------------->
+        <script src="resources/js/contact.js"></script>
+        <!-----------------LOCAL (MAIN FILE)----------------->
+        <script src="resources/js/main.js"></script>
+
+        <!-----------------LOCAL (MAIN FILE { USED TO ANIMATE WEBPAGE.})----------------->
+        <script>
+            const animate1 = anime.timeline({
+                targets: ".circle",
+                loop: true,
+                duration: 2000,
+                direction: "alternate",
+                easing: "easeInOutQuad",
+            });
+            animate1.add({
+                translateX: 350,
+            });
+
+            let dot = document.querySelectorAll(".dot");
+            for (let i = 0; i < dot.length; i++) {
+                const ind = dot[i];
+                const animate2 = anime.timeline({
+                    targets: ind,
+                    loop: true,
+                    direction: "alternate",
+                    delay: i * 100,
+                });
+                animate2.add({
+                    scale: 2,
+                });
+            }
+
+            let span = document.querySelectorAll(".content .text span");
+            const animate3 = anime.timeline({
+                targets: span,
+                easing: "easeInOutExpo",
+                delay: anime.stagger(20, { direction: "reverse" }),
+                direction: "reverse",
+                autoplay: false,
+            });
+
+            animate3.add({
+                rotate: () => {
+                    return anime.random(-360, 360);
+                },
+                translateX: () => {
+                    return anime.random(-500, 500);
+                },
+                translateY: () => {
+                    return anime.random(-500, 500);
+                },
+                duration: 3000,
+            });
+
+            const animate4 = anime({
+                targets: ".button",
+                scale: [0, 1],
+                delay: anime.stagger(200, { start: 7000 }),
+                autoplay: false,
+            });
+
+            const animate5 = anime({
+                targets: [
+                    document.querySelectorAll(".info"),
+                    document.querySelectorAll(".inp_field"),
+                    ".message",
+                    ".submit",
+                ],
+                translateY: [50, 0],
+                rotateX: [90, 0],
+                opacity: [0, 1],
+                delay: anime.stagger(300, { start: 1000 }),
+                duration: 750,
+                autoplay: false,
+                easing: "easeOutQuint",
+            });
+            
+            const animate6 = anime({
+                targets: ['.services .t_dummy', '.services .hero-text'],
+                duration: 1000,
+                scaleX: [0, 1],
+                delay: anime.stagger(300, {start: 1000}),
+                autoplay: false,
+            });
+
+            function resize() {
+                if (window.innerWidth <= 632) {
+                    animate5.play();
+                    animate3.play();
+                    animate4.play();
+                    animate6.play();
+                }
+            }
+            resize();
+            window.addEventListener("resize", resize);
+        </script>
+    </body>
+</html>
